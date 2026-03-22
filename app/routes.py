@@ -25,7 +25,7 @@ def create_tasks(task: Task):
 def get_task(task_id: int):
     if task_id >= len(tasks) or task_id < 0:
         logger.warning(f"Task {task_id} not found")
-        raise HTTPException(status_code=404, detail ="Task mot found")
+        raise HTTPException(status_code=404, detail ="Task not found")
     logger.info(f"Fetching task {task_id}")
     return tasks[task_id]
 
