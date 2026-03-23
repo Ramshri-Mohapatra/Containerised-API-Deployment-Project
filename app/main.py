@@ -10,9 +10,8 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__) 
 app = FastAPI(
-    title="Task Manager API",
-    description="A simple task management API",
-    version="1.0.0"
+    title=settings.app_name,
+    version=settings.app_version
 )
 
 app.include_router(router)
